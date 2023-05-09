@@ -1,20 +1,19 @@
-import { PrismaClient } from '@prisma/client'
-import { log } from 'console'
 import fastify from 'fastify'
+import { PrismaClient } from '@prisma/client'
 
 const app = fastify()
 const prisma = new PrismaClient()
-const port = 3333
 
 app.get('/users', async () => {
   const users = await prisma.user.findMany()
+
   return users
 })
 
 app
   .listen({
-    port,
+    port: 3333,
   })
   .then(() => {
-    log(`🚀 HTTP server running on http://localhost:${port}`)
+    console.log('🚀 HTTP server running on port http://localhost:3333')
   })
