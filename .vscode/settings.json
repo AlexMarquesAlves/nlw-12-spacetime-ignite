@@ -167,7 +167,7 @@
   "git.enableSmartCommit": true,
   "editor.accessibilitySupport": "off",
   "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.fontSize": 14,
+  // "terminal.integrated.fontSize": 14,
   // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
@@ -180,7 +180,7 @@
   ],
   "editor.semanticHighlighting.enabled": false,
   "breadcrumbs.enabled": true,
-  // "workbench.productIconTheme": "fluent-icons",
+  "workbench.productIconTheme": "fluent-icons",
   // "editor.fontFamily": "JetBrains Mono",
   "gitlens.codeLens.authors.enabled": false,
   "editor.tabSize": 2,
@@ -213,5 +213,5 @@
   },
   "window.commandCenter": true,
   "git.openRepositoryInParentFolders": "always",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 0
 }
