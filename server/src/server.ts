@@ -1,15 +1,15 @@
-import { PrismaClient } from '@prisma/client'
+import cors from '@fastify/cors'
 import { log } from 'console'
 import fastify from 'fastify'
+import { memoriesRoutes } from './routes/memories'
 
 const app = fastify()
-const prisma = new PrismaClient()
-const port = 3333
-
-app.get('/users', async () => {
-  const users = await prisma.user.findMany()
-  return users
+app.register(cors, {
+  origin: true,
 })
+app.register(memoriesRoutes)
+
+const port = 3333
 
 app
   .listen({
